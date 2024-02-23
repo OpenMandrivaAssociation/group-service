@@ -1,0 +1,21 @@
+From 951041f6dd13f95259e0399dfbf14568a39844fd Mon Sep 17 00:00:00 2001
+From: zhuyaliang <15132211195@163.com>
+Date: Sun, 13 Feb 2022 16:58:54 +0800
+Subject: [PATCH] Fix Function does not take positional arguments
+
+---
+ data/meson.build | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/data/meson.build b/data/meson.build
+index 006546e..516e9bd 100644
+--- a/data/meson.build
++++ b/data/meson.build
+@@ -28,7 +28,6 @@ configure_file(
+ policy = gas_namespace.to_lower() + '.policy'
+ 
+ i18n.merge_file(
+-  policy,
+   input: policy + '.in',
+   output: policy,
+   po_dir: po_dir,
